@@ -1,0 +1,350 @@
+import java.util.*;
+ class SAL
+ {
+   public static void main(String args[])
+   { 
+    Scanner x=new Scanner (System.in);
+    System.out.println("WELCOME TO SNAKE AND LADDER");         
+    System.out.println();
+    System.out.println("_____________________________");
+    System.out.println("|⭐ 99 98 97 🐍 95 94 🐍 92 ↗️|");
+    System.out.println("|81 82 83 84 85 🐍 🐍 88 ↗️ 90|");
+    System.out.println("|80 79 78 77 76 🐍 74 ↗️ 72 71|");
+    System.out.println("|↖️ 62 63 ↗️ 65 66 ↗️ 68 🐍 70|");
+    System.out.println("|60 ↖️ ↗️ 57 🐍 ⬆️ 54 53 52 🐍|");
+    System.out.println("|41 ↗️ ↖️ 🐍 45 ⬆️ 47 48 🐍 50|");
+    System.out.println("|↗️ 39 🐍 ↖️ 36 ⬆️ 34 🐍 32 31|");
+    System.out.println("|21 🐍 23 24 25 ⬆️ 27 28 🐍 30|");
+    System.out.println("|20 19 18 ↗️ 16 ⬆️ 14 13 12 🐍|");
+    System.out.println("| 1 2 ↗️ 4 5 ⬆️ 7 8 9 🐍|");
+    System.out.println("______________________________");
+    System.out.println();
+    System.out.println("arrows are used in place of ladders");
+    System.out.println();
+    System.out.println("SNAKE");
+    System.out.println("from - to");
+    System.out.println("33 - 10");
+    System.out.println("56 - 22");
+    System.out.println("69 - 49");
+    System.out.println("93 - 75");
+    System.out.println("96 - 86");
+    System.out.println();
+    System.out.println("LADDER");
+    System.out.println("from - to");
+    System.out.println(" 3 - 17");
+    System.out.println(" 6 - 55");
+    System.out.println("37 - 61");
+    System.out.println("40 - 64");
+    System.out.println("67 - 91");
+    System.out.println();
+    System.out.println("Enter game type");
+    System.out.println("0 - person vs computer");
+    System.out.println("Any other number - person vs person");             
+    int input =x.nextInt ();
+    System.out.println();
+    String z="",p2="",p1="";
+    int dice,s=0,s1=0,dice1;
+    System.out.println("Enter your name ");
+    System.out.println("no space are allowed in the name ");
+    if(input==0)
+    {
+      p1=x.next();
+    }
+    else 
+    {
+      p1=x.next();
+      System.out.println("Enter name of player 2");
+      p2=x.next();
+    }
+    while (true)
+    {
+      System.out.println();
+      System.out.println();
+      System.out.println(p1);
+      System.out.println("Enter something to roll the dice");
+      z=x.next ();
+      dice = (int)(Math.random()*10);
+      if(dice!=1 && dice!=2 && dice!=3 && dice!=4 && dice!=5 && dice!=6)        
+      {
+        dice=1;
+      }
+      System.out.println("dice=" + dice);
+      if(dice!=1 && s==0)
+      {
+        s=0;
+      }
+      else
+      {
+        s+=dice;
+      }
+      if(s==3)
+      {
+        System.out.println("you got a ladder");
+        s=17;
+        System.out.println("u got another chance enter something ");
+        z=x.next ();
+        dice = (int)(Math.random()*10);
+        if(dice!=1 && dice!=2 && dice!=3 && dice!=4 && dice!=5 && dice!=6)        
+        {
+        dice=1;
+        }
+        s+=dice;
+        System.out.println("dice=" + dice);
+      }
+      if(s==6)
+      {
+        System.out.println("you got a ladder");
+        s=55;
+        System.out.println("u got another chance enter something");
+        z=x.next ();
+        dice = (int)(Math.random()*10);
+        if(dice!=1 && dice!=2 && dice!=3 && dice!=4 && dice!=5 && dice!=6)        
+        {
+        dice=1;
+        }
+        s+=dice;
+        System.out.println("dice=" + dice);
+      }
+      if(s==37)
+      {
+        System.out.println("you got a ladder");
+        s=61;
+        System.out.println("u got another chance enter something");
+        z=x.next ();
+        dice = (int)(Math.random()*10);
+        if(dice!=1 && dice!=2 && dice!=3 && dice!=4 && dice!=5 && dice!=6)        
+        {
+        dice=1;
+        }
+        s+=dice;
+        System.out.println("dice=" + dice);
+      }
+      if(s==40)
+      {
+        System.out.println("you got a ladder");
+        s=64;
+        System.out.println("u got another chance enter something");
+        z=x.next ();
+        dice = (int)(Math.random()*10);
+        if(dice!=1 && dice!=2 && dice!=3 && dice!=4 && dice!=5 && dice!=6)        
+        {
+        dice=1;
+        }
+        s+=dice;
+        System.out.println("dice=" + dice);
+      }
+      if(s==67)
+      {
+        System.out.println("you got a ladder");
+        s=91;
+        System.out.println("u got another chance enter something");
+        z=x.next ();
+        dice = (int)(Math.random()*10);
+        if(dice!=1 && dice!=2 && dice!=3 && dice!=4 && dice!=5 && dice!=6)        
+        {
+        dice=1;
+        }
+        s+=dice;
+        System.out.println("dice=" + dice);
+      }
+      if(s==33) 
+      {
+        System.out.println("you got a snake");
+        s=10;
+      }
+      if(s==56) 
+      {
+        System.out.println("you got a snake");
+        s=22;
+      }
+      if(s==69) 
+      {
+        System.out.println("you got a snake");
+        s=49;
+      }
+      if(s==93) 
+      {
+        System.out.println("you got a snake");
+        s=75;
+      }
+      if(s==96) 
+      {
+        System.out.println("you got a snake");
+        s=86;
+      }
+      if(s>100)
+      s-=dice;
+      if(s==100)
+      {
+        System.out.println();
+        System.out.println("____________________");
+        System.out.println("____________________");
+        System.out.println(p1 + " IS WINNER");
+        System.out.println("____________________");
+        System.out.println("____________________");
+        System.exit(0);
+      }
+      System.out.println("position="+s);
+      System.out.println();
+      System.out.println();
+
+
+      if(input!=0)
+      {
+        System.out.println(p2);
+        System.out.println("Enter something to roll the dice");
+        z=x.next ();
+      }
+      else
+      System.out.println("computer");
+      dice1 = (int)(Math.random()*10);
+      if(dice1!=1 && dice1!=2 && dice1!=3 && dice1!=4 && dice1!=5 && dice1!=6)        
+      {
+        dice1=1;
+      }
+      System.out.println("dice=" + dice1);
+      if(dice1!=1 && s1==0)
+      {
+        s1=0;
+      }
+      else
+      {
+        s1+=dice1;
+      }
+      if(s1==3)
+      {
+        System.out.println("you got a ladder");
+        s1=17;
+        if(input!=0)
+        {
+        System.out.println("u got another chance enter something");
+        z=x.next ();
+        }
+        dice1 = (int)(Math.random()*10);
+        if(dice1!=1 && dice1!=2 && dice1!=3 && dice1!=4 && dice1!=5 && dice1!=6)        
+        {
+        dice1=1;
+        }
+        s1+=dice1;
+        System.out.println("dice=" + dice1);
+      }
+      if(s1==6)
+      {
+        System.out.println("you got a ladder");
+        s1=55;
+        if(input!=0)
+        {
+        System.out.println("u got another chance enter something");
+        z=x.next ();
+        }
+        dice1 = (int)(Math.random()*10);
+        if(dice1!=1 && dice1!=2 && dice1!=3 && dice1!=4 && dice1!=5 && dice1!=6)        
+        {
+        dice1=1;
+        }
+        s1+=dice1;
+        System.out.println("dice=" + dice1);
+      }
+      if(s1==37)
+      {
+        System.out.println("you got a ladder");
+        s1=61;
+        if(input!=0)
+        {
+        System.out.println("u got another chance enter something");
+        z=x.next ();
+        }
+        dice1 = (int)(Math.random()*10);
+        if(dice1!=1 && dice1!=2 && dice1!=3 && dice1!=4 && dice1!=5 && dice1!=6)        
+        {
+        dice1=1;
+        }
+        s1+=dice1;
+        System.out.println("dice=" + dice1);
+      }
+      if(s1==40)
+      {
+        System.out.println("you got a ladder");
+        s1=64;
+        if(input!=0)
+        {
+        System.out.println("u got another chance enter something");
+        z=x.next ();
+        }
+        dice1 = (int)(Math.random()*10);
+        if(dice1!=1 && dice1!=2 && dice1!=3 && dice1!=4 && dice1!=5 && dice1!=6)        
+        {
+        dice1=1;
+        }
+        s1+=dice1;
+        System.out.println("dice=" + dice1);
+      }
+      if(s1==67)
+      {
+        System.out.println("you got a ladder");
+        s1=91;
+        if(input !=0)
+        {
+        System.out.println("u got another chance enter something");
+        z=x.next ();
+        }
+        dice1 = (int)(Math.random()*10);
+        if(dice1!=1 && dice1!=2 && dice1!=3 && dice1!=4 && dice1!=5 && dice1!=6)        
+        {
+        dice1=1;
+        }
+        s1+=dice1;
+        System.out.println("dice=" + dice1);
+      }
+      if(s1==33) 
+      {
+        System.out.println("you got a snake");
+        s1=10;
+      }
+      if(s1==56) 
+      {
+        System.out.println("you got a snake");
+        s1=22;
+      }
+      if(s1==69) 
+      {
+        System.out.println("you got a snake");
+        s1=49;
+      }
+      if(s1==93) 
+      {
+        System.out.println("you got a snake");
+        s1=75;
+      }
+      if(s1==96) 
+      {
+        System.out.println("you got a snake");
+        s1=86;
+      }
+      if(s1>100)
+      s1-=dice1;
+      if(s1==100)
+      {
+        if(input!=0)
+        {
+        System.out.println("____________________");
+        System.out.println("____________________");
+        System.out.println(p2+ " IS WINNER");
+        System.out.println("____________________");
+        System.out.println("____________________");
+        System.exit(0);
+        }
+        else 
+        {
+          System.out.println("____________________");
+          System.out.println("____________________");
+          System.out.println("Computer IS WINNER");
+          System.out.println("____________________");
+          System.out.println("____________________");
+          System.exit(0);
+        }
+      }
+      System.out.println("position="+s1);
+    }
+   }
+ }
